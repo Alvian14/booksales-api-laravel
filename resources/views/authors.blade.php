@@ -10,12 +10,20 @@
 <body>
     <div class="container">
         <h1 class="mb-4">Data Authors</h1>
-        @foreach ($authors as $item)
+        {{-- @foreach ($authors as $item)
             <ul class="list-group mb-3">
                 <li class="list-group-item"><strong>ID:</strong> {{ $item['id'] }}</li>
                 <li class="list-group-item"><strong>Nama:</strong> {{ $item['name'] }}</li>
                 <li class="list-group-item"><strong>Photo:</strong> {{ $item['photo'] }}</li>
                 <li class="list-group-item"><strong>Bio:</strong> {{ $item['bio'] }}</li>
+            </ul>
+        @endforeach --}}
+
+        @foreach ($authors as $author)
+            <ul class="list-group mb-3">
+                <li class="list-group-item"><strong>Name:</strong> {{ $author['name'] }}</li>
+                <li class="list-group-item"><strong>Photo:</strong> {{ $author['photo'] }}</li>
+                <li class="list-group-item"><strong>Bio:</strong> {{ $author['bio'] }}</li>
             </ul>
         @endforeach
     </div>
