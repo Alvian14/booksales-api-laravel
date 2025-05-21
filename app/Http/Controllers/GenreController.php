@@ -59,7 +59,7 @@ class GenreController extends Controller
             "success" => true,
             "massage" => "Resource added successfully!",
             "data" => $genre
-        ], 200);
+        ], 201);
             
     }
 }
