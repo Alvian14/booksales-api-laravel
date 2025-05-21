@@ -12,10 +12,13 @@ Route::get('/user', function (Request $request) {
 
 
 //routing books
-Route:: get ('/books', [BookController::class, 'book']);
+Route::get('/books', [BookController::class, 'book']);
+Route::post('/books', [BookController::class, 'store']);
 
 //routing genres
 Route:: get ('/genres', [GenreController::class, 'genre']);
+Route:: post ('/genres', [GenreController::class, 'store']);
 
 //routing authors
 Route:: get ('/authors', [AuthorController::class, 'author']);
+Route:: post ('/authors', [AuthorController::class, 'store']);
