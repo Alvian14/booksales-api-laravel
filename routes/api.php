@@ -20,7 +20,7 @@ Route::post('/login', [AuthController::class, 'login']);
 Route::post('/logout', [AuthController::class, 'logout'])->middleware('auth:api');
 
 //route books
-Route::apiResource('/books', BookController::class)->only(['index', 'show']);
+Route::apiResource('/books', BookController::class)->only(['index',]);
 //route genres
 Route::apiResource('/genres', GenreController::class)->only(['index']);
 //route authors
