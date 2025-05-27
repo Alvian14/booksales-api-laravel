@@ -21,7 +21,7 @@ class BookController extends Controller
         // return view('books', ['books' => $books]);
 
         // digunakan untuk response di JSON
-        $books = Book::all();
+        $books = Book::with('genre', 'author')->get();
 
         if ($books->isEmpty()) {
             return response()->json([
@@ -86,7 +86,7 @@ class BookController extends Controller
 
     // kode untuk mengambil data berdasarkan id
     public function show(string $id) {
-         $book = Book::find($id);
+         $book = Book::with('genre', 'author')->find($id);
 
         // respone untuk data tidak ditemukan
         if (!$book) {
