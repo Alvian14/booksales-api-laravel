@@ -10,6 +10,7 @@ use Tymon\JWTAuth\Facades\JWTAuth;
 
 class AuthController extends Controller
 {
+
     public function register(Request $request) {
         //validator
         $validator = Validator::make($request->all(), [
@@ -22,7 +23,7 @@ class AuthController extends Controller
         if ($validator->fails()) {
             return response()->json($validator->errors(),422);
         }
- 
+
         //create user
         $user = User::create([
             'name' => $request->name,

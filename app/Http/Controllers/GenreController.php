@@ -11,7 +11,7 @@ class GenreController extends Controller
     public function index(){
         // $data = new Genre();
         // $genres = $data ->getGenres();
-        
+
         // $genres = Genre::all();
         // return view('genres', ['genres' => $genres]);
 
@@ -60,7 +60,7 @@ class GenreController extends Controller
             "massage" => "Resource added successfully!",
             "data" => $genre
         ], 201);
-            
+
     }
 
     // source code mengambil data berdasarkan id
@@ -74,7 +74,7 @@ class GenreController extends Controller
                 "message" => "resource not found"
             ], 404);
         }
-        
+
         // response data ditemukan
         return response()->json([
             "success" => true,
